@@ -1,0 +1,258 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('building 5.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+header, footer {
+    background: rgba(0, 123, 255, 0.7); /* Add transparency */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: rgba(0, 86, 179, 0.7); /* Semi-transparent nav */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.content {
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 100px; /* Space for the footer */
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Portfolio Item Styling */
+.portfolio-item {
+    position: relative; /* Make sure portfolio item is relatively positioned */
+    margin: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    flex: 0 0 30%; /* Set width for project image container */
+}
+
+/* Image Container */
+.project-container {
+    position: relative; /* Set parent container to relative position */
+    width: 300px; /* Define a fixed width for the container */
+    height: 300px; /* Define a fixed height for the container */
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 20px 20px 0; /* Align container to the left with margin */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+           display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px; /* Space between the image and the project details */
+        margin-top: 50px; /* Center the content vertically */
+
+}
+
+/* Transparent Overlay */
+.transparent-overlay {
+    position: absolute; /* Position overlay relative to its parent */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Lower opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Image Stretching to Fill Container */
+.project-image {
+    
+        width: 80%;
+        max-width: 350px;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow */
+    }
+
+/* Hover Effect */
+.portfolio-item:hover .transparent-overlay {
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle change on hover */
+}
+
+/* Hover Effect */
+.portfolio-item:hover .project-image {
+    opacity: 1;
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Overlay Text */
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 2;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show overlay on hover */
+.portfolio-item:hover .overlay-text {
+    opacity: 1;
+}
+
+.experience-container {
+    position: relative; 
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 50px auto; /* Increased margin-top to 50px to add more space from the top */
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: -80px
+}
+.transparent-overlayex {
+    position: absolute; /* Position overlay relative to its parent */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Lower opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.experience-image {
+    width: 80%;
+    max-width: 350px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: shadow */
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+.experience-details 
+{
+    position: fixed; /* This ensures the element stays fixed on the screen */
+    top: 10%; /* Adjust this value to control how far from the top it appears */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Move it to the exact center horizontally */
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Keep it above other content */
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.project-details
+{
+
+   
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        padding: 20px;
+        border: 2px solid #ccc;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        width: 300px;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    
+
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 123, 255, 0.8); /* Add transparency */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <h1>MY PORTFOLIO</h1>
+        <p>Network Engineer</p>
+        <p>Contact: <a href="mailto:your.email@example.com">raki2b@gmail.com</a></p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" id="home-btn">Home</a></li>
+            <li><a href="portfolio.html" id="portfolio-btn">Portfolio</a></li>
+            <li><a href="contactme.html" id="contact-btn">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <section id="projects">
+           
+            <div class="portfolio-container">
+                <!-- Portfolio item with onclick event to show project details -->
+                <div class="portfolio-item" onclick="showProjectDetails('Lab Project', ['LAB1.zip', 'LAB2.zip'], ['LAB 1', 'LAB 2'])">
+                    <div class="project-container">
+                        <img src="project 2.jpg" alt="Experience" class="project-image">
+                        <div class="transparent-overlay">
+                            <div class="overlay-text">
+                                <ul>
+                                    <li><a href="javascript:void(0)">View Projects</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Modal for project details -->
+        <div id="project-details" class="project-details hidden">
+            <h3 id="LAB1"></h3>
+            <ul id="LAB2"></ul>
+            <button onclick="closeProjectDetails()">Close</button>
+        </div>
+    </div>
+    
+
+    
+
+                <div class="portfolio-item" onclick="showExperienceDetails('Network Administrator', 'Bank of Abyssinia', '2022 GC', 'Responsibilities and achievements here.')">
+                    <div class="experience-container">
+                    <img src="Expericence 2.jpg" alt="Experience" class="experience-image">
+                    <div class="transparent-overlayex">
+                    <div class="overlay">
+                        <ul>
+                            <li><a href="javascript:void(0)">Work Experience</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                </div>
+                <!-- Experience Details Section -->
+                <div id="experience-details" class="experience-details hidden">
+                    <h3 id="job-title"></h3>
+                    <p id="company-name"></p>
+                    <p id="job-date" class="job-date"></p>
+                    <p id="job-responsibilities" class="job-responsibilities"></p>
+                    <button onclick="closeExperienceDetails()">Close</button>
+                </div>
+                
+
+                
+    </div>
+    
+    
+    <footer>
+        <p>Connect with me on <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a></p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
